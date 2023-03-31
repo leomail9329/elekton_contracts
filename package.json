@@ -1,0 +1,84 @@
+{
+    "name": "snknot-contracts",
+    "version": "0.1.0",
+    "description": "Solidity smart contracts to vote anonymously on a free-gas network (Besu) using zk-SNARK.",
+    "keywords": [
+        "typescript",
+        "ethereum",
+        "ethereum-contract",
+        "solidity",
+        "contracts",
+        "zk-snarks",
+        "anonymous",
+        "voting"
+    ],
+    "files": [
+        "contracts/",
+        "scripts/",
+        "test/",
+        "types/",
+        "LICENSE",
+        "README.md"
+    ],
+    "scripts": {
+        "start": "besu --config-file=besu.config.toml",
+        "compile": "hardhat compile",
+        "@commitlint/cli": "^12.0.1",
+        "@commitlint/config-conventional": "^12.0.1",
+        "@nomiclabs/hardhat-ethers": "^2.0.2",
+        "@nomiclabs/hardhat-waffle": "^2.0.1",
+        "@types/chai": "^4.2.15",
+        "@types/mocha": "^8.2.2",
+        "@types/node": "^14.14.37",
+        "@typescript-eslint/eslint-plugin": "^4.20.0",
+        "@typescript-eslint/parser": "^4.20.0",
+        "blake-hash": "^2.0.0",
+        "bn.js": "^5.2.0",
+        "chai": "^4.3.4",
+        "circom": "^0.5.42",
+        "circomlib": "^0.5.1",
+        "commitizen": "^4.2.3",
+        "cz-conventional-changelog": "^3.3.0",
+        "eslint": "^7.23.0",
+        "eslint-config-prettier": "^8.1.0",
+        "ethereum-waffle": "^3.3.0",
+        "ethers": "^5.0.32",
+        "fastfile": "0.0.19",
+        "ffjavascript": "^0.2.35",
+        "hardhat": "^2.1.2",
+        "js-logger": "^1.6.1",
+        "lint-staged": "^10.5.4",
+        "prettier": "2.2.1",
+        "snarkjs": "^0.3.60",
+        "solhint": "^3.3.4",
+        "ts-node": "^9.1.1",
+        "typescript": "^4.2.3"
+    },
+    "config": {
+        "solidity": {
+            "version": "0.6.11",
+            "settings": {
+                "outputSelection": {
+                    "contracts/Snknot.sol": {
+                        "Snknot": [
+                            "devdoc"
+                        ]
+                    }
+                }
+            }
+        },
+        "paths": {
+            "contracts": "./contracts",
+            "circuit": "./circuit",
+            "tests": "./test",
+            "cache": "./cache",
+            "build": {
+                "snark": "./build/snark",
+                "contracts": "./build/contracts"
+            }
+        },
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}
