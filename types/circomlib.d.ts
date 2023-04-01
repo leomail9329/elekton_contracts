@@ -24,6 +24,32 @@ declare module "circomlib" {
 
         multiGet(...args: any[]): void
 
+        multiIns(...args: any[]): void
+
+        setRoot(...args: any[]): void
+    }
+
+    export function poseidon(inputs: any): any
+
+    export namespace babyJub {
+        const A: any
+
+        const Base8: any[]
+
+        const D: any
+
+        const Generator: any[]
+
+        const order: any
+
+        const p: any
+
+        const subOrder: any
+
+        function addPoint(a: any, b: any): any
+
+        function inCurve(P: any): any
+
         function inSubgroup(P: any): any
 
         function mulPointEscalar(base: any, e: any): any
