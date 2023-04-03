@@ -4,12 +4,6 @@ declare module "circomlib" {
     export class SMT {
         constructor(...args: any[])
 
-        delete(...args: any[]): void
-
-        find(...args: any[]): void
-
-        insert(...args: any[]): void
-
         update(...args: any[]): void
     }
 

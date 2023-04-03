@@ -3,12 +3,6 @@
     "version": "0.1.0",
     "description": "Solidity smart contracts to vote anonymously on a free-gas network (Besu) using zk-SNARK.",
     "keywords": [
-        "typescript",
-        "ethereum",
-        "ethereum-contract",
-        "solidity",
-        "contracts",
-        "zk-snarks",
         "anonymous",
         "voting"
     ],

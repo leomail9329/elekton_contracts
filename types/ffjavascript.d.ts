@@ -3,12 +3,6 @@
 declare module "ffjavascript" {
     export class BigBuffer {
         constructor(...args: any[])
-
-        set(...args: any[]): void
-
-        slice(...args: any[]): void
-    }
-
     export class ChaCha {
         constructor(...args: any[])
 
