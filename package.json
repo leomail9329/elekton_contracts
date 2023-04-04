@@ -3,16 +3,11 @@
     "version": "0.1.0",
     "description": "Solidity smart contracts to vote anonymously on a free-gas network (Besu) using zk-SNARK.",
     "keywords": [
-        "anonymous",
-        "voting"
-    ],
-    "files": [
-        "contracts/",
-        "scripts/",
-        "test/",
-        "types/",
-        "LICENSE",
-        "README.md"
+        "typescript",
+        "ethereum",
+        "ethereum-contract",
+        "solidity",
+        "contracts",
     ],
     "scripts": {
         "start": "besu --config-file=besu.config.toml",

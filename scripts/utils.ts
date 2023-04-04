@@ -3,6 +3,12 @@ import { eddsa, poseidon } from "circomlib"
 import { SMT } from "@cedoor/smt"
 import crypto from "crypto"
 import { Contract, providers, Wallet } from "ethers"
+import { Scalar, utils } from "ffjavascript"
+import { ethers } from "hardhat"
+import { groth16 } from "snarkjs"
+import { config } from "../package.json"
+import { ChildNodes, Proof } from "@cedoor/smt/dist/types/smt"
+
 export function getProjectConfig() {
     return config
 }

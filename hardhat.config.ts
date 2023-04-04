@@ -3,6 +3,12 @@ import { task, types, HardhatUserConfig } from "hardhat/config"
 
 import "@nomiclabs/hardhat-waffle"
 import "@nomiclabs/hardhat-ethers"
+
+// https://hardhat.org/guides/create-task.html
+
+task("deploy", "Deploy a contract instance")
+    .addOptionalParam("contract", "The name of the contract", "Snknot", types.string)
+    .addOptionalParam("quiet", "To quiet output messages", false, types.boolean)
     .setAction(async (args, hre) => {
         const { contract, quiet } = args
         const ContractFactory = await hre.ethers.getContractFactory(contract)

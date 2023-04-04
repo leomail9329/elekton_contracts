@@ -3,6 +3,12 @@
 declare module "solc" {
     export const features: {
         importCallback: boolean
+        legacySingleInput: boolean
+        multipleInputs: boolean
+        nativeStandardJSON: boolean
+    }
+
+    export function compile(input: any, readCallback: any): any
 
     export function license(...args: any[]): any
 

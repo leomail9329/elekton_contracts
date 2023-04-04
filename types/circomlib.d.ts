@@ -4,15 +4,10 @@ declare module "circomlib" {
     export class SMT {
         constructor(...args: any[])
 
-        update(...args: any[]): void
-    }
+        delete(...args: any[]): void
 
-    export class SMTMemDB {
-        constructor(...args: any[])
+        find(...args: any[]): void
 
-        get(...args: any[]): void
-
-        getRoot(...args: any[]): void
 
         multiDel(...args: any[]): void
 
