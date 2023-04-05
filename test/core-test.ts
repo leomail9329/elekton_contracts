@@ -8,6 +8,17 @@ import {
     getLastBlockTimestamp,
     getTreeRoot,
     stringToBytes32,
+    waitConfirmations
+} from "../scripts/utils"
+
+describe("Core tests", () => {
+    let elekton: Contract
+    let accounts: { wallet: Wallet; voter: any }[]
+    let elektonUser1: Contract
+
+    before(async () => {
+        accounts = await createAccounts()
+        elekton = await deployContract("Elekton", accounts[0].wallet)
         elektonUser1 = elekton.connect(accounts[1].wallet)
     })
 

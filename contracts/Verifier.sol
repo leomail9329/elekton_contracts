@@ -8,16 +8,11 @@
 //      ported to solidity 0.6
 //      fixed linter warnings
 //      added requiere error messages
-        uint[2] X;
-        uint[2] Y;
-    }
-    /// @return the generator of G1
-    function P1() internal pure returns (G1Point memory) {
-        return G1Point(1, 2);
-    }
-    /// @return the generator of G2
-    function P2() internal pure returns (G2Point memory) {
-        // Original code point
+//
+//
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity ^0.6.11;
+library Pairing {
         return G2Point(
             [11559732032986387107991004021392285783925812861821192530917403151452391805634,
              10857046999023057135944570762232829481370756359578518086990519993285655852781],

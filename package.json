@@ -8,6 +8,17 @@
         "ethereum-contract",
         "solidity",
         "contracts",
+        "zk-snarks",
+        "anonymous",
+        "voting"
+    ],
+    "files": [
+        "contracts/",
+        "scripts/",
+        "test/",
+        "types/",
+        "LICENSE",
+        "README.md"
     ],
     "scripts": {
         "start": "besu --config-file=besu.config.toml",

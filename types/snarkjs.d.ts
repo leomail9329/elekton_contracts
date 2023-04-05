@@ -8,6 +8,17 @@ declare module "snarkjs" {
     }
 
     export const powersOfTau: {
+        beacon: any
+        challengeContribute: any
+        contribute: any
+        convert: any
+        exportChallenge: any
+        exportJson: any
+        importResponse: any
+        newAccumulator: any
+        preparePhase2: any
+        truncate: any
+        verify: any
     }
 
     export const r1cs: {

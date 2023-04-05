@@ -14,22 +14,6 @@ declare module "ffjavascript" {
 
         nextBool(...args: any[]): void
 
-        nextU32(...args: any[]): void
-
-        nextU64(...args: any[]): void
-
-        update(...args: any[]): void
-    }
-
-    export class EC {
-        constructor(...args: any[])
-
-        add(...args: any[]): void
-
-        affine(...args: any[]): void
-
-        double(...args: any[]): void
-
         eq(...args: any[]): void
 
         fromRng(...args: any[]): void

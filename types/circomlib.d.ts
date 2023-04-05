@@ -8,6 +8,17 @@ declare module "circomlib" {
 
         find(...args: any[]): void
 
+        insert(...args: any[]): void
+
+        update(...args: any[]): void
+    }
+
+    export class SMTMemDB {
+        constructor(...args: any[])
+
+        get(...args: any[]): void
+
+        getRoot(...args: any[]): void
 
         multiDel(...args: any[]): void
 

@@ -13,22 +13,6 @@ task("deploy", "Deploy a contract instance")
         const { contract, quiet } = args
         const ContractFactory = await hre.ethers.getContractFactory(contract)
         const instance = await ContractFactory.deploy()
-
-        if (!quiet) {
-            console.log(`Contract ${contract} deployed to: ${instance.address}`)
-        }
-
-        return instance
-    })
-
-// https://hardhat.org/config/
-const hardhatConfig: HardhatUserConfig = {
-    solidity: config.solidity,
-    paths: {
-        sources: config.paths.contracts,
-        tests: config.paths.tests,
-        cache: config.paths.cache,
-        artifacts: config.paths.build.contracts
     },
     defaultNetwork: "besu",
     networks: {
