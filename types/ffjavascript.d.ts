@@ -14,15 +14,10 @@ declare module "ffjavascript" {
 
         nextBool(...args: any[]): void
 
-        eq(...args: any[]): void
+        nextU32(...args: any[]): void
 
-        fromRng(...args: any[]): void
+        nextU64(...args: any[]): void
 
-        fromRprBE(...args: any[]): void
-
-        fromRprBEM(...args: any[]): void
-
-        fromRprCompressed(...args: any[]): void
 
         fromRprLE(...args: any[]): void
 
