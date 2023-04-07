@@ -23,32 +23,6 @@
     "scripts": {
         "start": "besu --config-file=besu.config.toml",
         "compile": "hardhat compile",
-        "clean": "hardhat clean",
-        "test": "hardhat test",
-        "deploy": "hardhat deploy",
-        "snark": "ts-node scripts/create-snark-artifacts.ts",
-        "lint": "solhint contracts/**/*.sol",
-        "commit": "git-cz",
-        "precommit": "lint-staged"
-    },
-    "lint-staged": {
-        "{scripts,test}/**/*.ts": [
-            "prettier --write",
-            "eslint --fix"
-        ]
-    },
-    "prettier": {
-        "semi": false,
-        "arrowParens": "always",
-        "trailingComma": "none"
-    },
-    "commitlint": {
-        "extends": [
-            "@commitlint/config-conventional"
-        ]
-    },
-    "devDependencies": {
-        "@cedoor/smt": "^0.1.6",
         "@commitlint/cli": "^12.0.1",
         "@commitlint/config-conventional": "^12.0.1",
         "@nomiclabs/hardhat-ethers": "^2.0.2",

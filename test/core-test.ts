@@ -18,6 +18,27 @@ describe("Core tests", () => {
 
     before(async () => {
         accounts = await createAccounts()
+        elekton = await deployContract("Elekton", accounts[0].wallet)
+        elektonUser1 = elekton.connect(accounts[1].wallet)
+    })
+
+    describe("#createUser()", () => {
+        let user1Address: string
+
+        before(async () => {
+            user1Address = await accounts[1].wallet.getAddress()
+        })
+
+        for (let i = 1; i < 5; i++) {
+            const data = stringToBytes32(i.toString())
+
+            it(`User ${i} should add himself`, async () => {
+                const elektonUser = elekton.connect(accounts[i].wallet)
+                const address = await accounts[i].wallet.getAddress()
+
+                await expect(waitConfirmations(elektonUser.createUser(data)))
+                    .to.emit(elekton, "UserCreated")
+                    .withArgs(address, data)
             })
         }
 
