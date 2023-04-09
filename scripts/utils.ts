@@ -1,4 +1,3 @@
-import createBlakeHash from "blake-hash"
 import { eddsa, poseidon } from "circomlib"
 import { SMT } from "@cedoor/smt"
 import crypto from "crypto"
@@ -28,6 +27,37 @@ export async function createAccounts(n = 10) {
 
 function createVoterAccount() {
     const privateKey = crypto.randomBytes(32)
+    const publicKey = eddsa.prv2pub(privateKey)
+
+    return { privateKey, publicKey }
+}
+
+export async function getLastBlockTimestamp(provider: providers.Provider): Promise<number> {
+    const blockNumber = await provider.getBlockNumber()
+    const { timestamp } = await provider.getBlock(blockNumber)
+
+    return timestamp
+}
+
+function getTree(publicKeys: bigint[][]): SMT {
+    const hash = (childNodes: ChildNodes) => poseidon(childNodes)
+    const tree = new SMT(hash, true)
+
+    for (const publicKey of publicKeys) {
+        tree.add(publicKey[0], publicKey[1])
+    }
+
+    return tree
+}
+
+function getTreeProof(publicKeys: any[], publicKey: any): Proof {
+    const tree = getTree(publicKeys)
+
+    return tree.createProof(publicKey[0])
+}
+
+export function getTreeRoot(publicKeys: any[]): bigint {
+    return getTree(publicKeys).root as bigint
 }
 
 export async function waitConfirmations(transactionPromise: Promise<any>, confirmations = 1): Promise<any> {

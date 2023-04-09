@@ -1,4 +1,3 @@
-import { config } from "./package.json"
 import { task, types, HardhatUserConfig } from "hardhat/config"
 
 import "@nomiclabs/hardhat-waffle"

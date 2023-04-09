@@ -1,4 +1,3 @@
-import { expect } from "chai"
 import { Contract, Wallet } from "ethers"
 import {
     createSnknotProof,

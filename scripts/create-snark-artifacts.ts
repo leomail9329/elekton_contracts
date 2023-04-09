@@ -1,4 +1,3 @@
-import fs from "fs"
 import circom from "circom"
 import { powersOfTau, r1cs, zKey } from "snarkjs"
 import { buildBn128 } from "ffjavascript"
