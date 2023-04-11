@@ -1,3 +1,4 @@
+import createBlakeHash from "blake-hash"
 import { eddsa, poseidon } from "circomlib"
 import { SMT } from "@cedoor/smt"
 import crypto from "crypto"

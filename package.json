@@ -1,3 +1,4 @@
+{
     "name": "snknot-contracts",
     "version": "0.1.0",
     "description": "Solidity smart contracts to vote anonymously on a free-gas network (Besu) using zk-SNARK.",
